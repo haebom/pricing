@@ -22,9 +22,8 @@
 
 ### 빌드/정적 내보내기
 - 빌드: `npm run build`
-- 정적 내보내기: `npm run export`
 
-`next.config.ts`에서 `output: 'export'`로 설정되어 있어 GitHub Pages 등 정적 호스팅에 적합합니다.
+Next.js 15에서는 `next export`가 제거되었습니다. `next.config.ts`에서 `output: 'export'`를 설정하면 `npm run build`만으로 정적 산출물(`out/`)이 생성되며 GitHub Pages 등 정적 호스팅에 바로 배포할 수 있습니다.
 
 ## 환경 변수
 - `NEXT_PUBLIC_INDEX`: 검색 엔진 인덱싱 허용 여부(`true`/`false`)
@@ -60,7 +59,7 @@
 - 다중 Y축을 사용하는 페이지(`Gabor`)에서는 `ReferenceLine` 등 축 의존 컴포넌트에 `yAxisId`를 명시적으로 지정합니다.
 
 ## 배포
-정적 내보내기(`npm run export`) 결과를 GitHub Pages 등으로 배포할 수 있습니다. `next.config.ts`의 `basePath`/`assetPrefix`를 환경 변수로 설정해 리소스 경로를 맞춰주세요.
+빌드 결과(`out/`)를 GitHub Pages 등으로 배포할 수 있습니다. `next.config.ts`의 `basePath`/`assetPrefix`를 환경 변수로 설정해 리소스 경로를 맞춰주세요. 워크플로에서는 `npm run build`만 실행하면 됩니다.
 
 ## 라이선스
 학습 및 데모 목적의 예시 프로젝트입니다. 외부 서비스의 가격 데이터는 실제와 다를 수 있으며, 예시 데이터는 사용자 시나리오에 맞게 조정하세요.

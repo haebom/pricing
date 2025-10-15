@@ -23,14 +23,13 @@ jobs:
           cache: npm
       - name: Install
         run: npm ci
-      - name: Build & Export
+      - name: Build Static Output
         env:
           GITHUB_PAGES: true
           NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
           NEXT_PUBLIC_INDEX: true
         run: |
           npm run build
-          npm run export
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
