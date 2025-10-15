@@ -50,7 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <footer className="container py-8 text-sm text-gray-600">
           <div className="flex items-center gap-3 mb-3">
             <Image src="/logo.png" alt="Oswarld logo" width={28} height={28} />
-            <span className="font-medium">Oswarld's World</span>
+            <span className="font-medium">Oswarld&apos;s World</span>
           </div>
           <div className="space-y-1">
             <p>사업자 등록번호 | 735-23-01161</p>
